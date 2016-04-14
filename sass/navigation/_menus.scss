@@ -1,0 +1,245 @@
+/* Styles for both desktop and mobile menus. */
+.main-navigation {
+	.menu,
+	.menu-item,
+	.sub-menu {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-weight: bold;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+	a {
+		color: $color__menu-items;
+		text-decoration: none;
+		font-size: 0.8125em;
+	}
+}
+
+/* Hide stuff on mobile screens. */
+#primary-navigation,
+.right-container,
+#desktop-search {
+	display: none;
+}
+
+/* Reveal stuff on mobile screens. */
+.menu-toggle,
+#mobile-navigation {
+	display: block;
+}
+
+/* Menu toggle. */
+.menu-toggle {
+	display: inline-block;
+	margin: 0 1em;
+	padding: 0;
+	border: none;
+	box-shadow: none;
+	border-radius: 0;
+	background-color: transparent;
+	.lines {
+		display: block;
+		position: relative;
+		width: 20px;
+		height: 2px;
+		transition: 0.5s;
+		background-color: white;
+	}
+	.lines:before,
+	.lines:after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 20px;
+		height: 2px;
+		transition: 0.25s;
+		background-color: white;
+	}
+	.lines:before {
+		top: -7px;
+	}
+	.lines:after {
+		top: 7px;
+	}
+	&:hover,
+	&:focus {
+		background: transparent!important;
+	}
+	&:hover {
+		.lines,
+		.lines:before,
+		.lines:after {
+			transition: 0.5s;
+		}
+	}
+	&:focus {
+		border-color: transparent;
+		box-shadow: none;
+	}
+}
+.menu-toggled {
+	.lines {
+		background-color: transparent;
+	}
+	.lines:before {
+		transform: rotate(-45deg);
+		top: 0;
+	}
+	.lines:after {
+		transform: rotate(45deg);
+		top: 0;
+	}
+}
+
+/* Mobile menu. */
+#mobile-navigation {
+	padding: 1em 1em 0 1em;
+	.menu-title {
+		padding-bottom: 1em;
+		h1 {
+			margin: 0;
+			padding: 16px;
+			padding: 1em;
+			font-size: 20px;
+			font-size: 1.25em;
+			text-align: center;
+			text-transform: uppercase;
+			border-top: 2px solid white;
+			border-bottom: 2px solid white;
+			color: $color__mobile-menu-title;
+		}
+	}
+	ul.sub-menu {
+		margin:  0 0 0 5%;
+	}
+	li.menu-item {
+		a {
+			display: block;
+			width: 100%;
+			padding: 12px;
+			padding: 0.75em;
+			transition: 0.125s;
+			line-height: 1;
+			text-decoration: none;
+			&:hover,
+			&:focus {
+				color: $color__mobile-menu-hover;
+				background: $color__background-mobile-menu-hover;
+			}
+		}
+	}
+}
+
+/* Desktop menus. */
+#primary-navigation,
+#secondary-navigation {
+	justify-content: center;
+	align-items: center;
+	ul.menu li {
+		display: inline;
+		position: relative;
+		padding: 0.4em;
+		letter-spacing: -1px;
+		
+	}
+	li.menu-item a {
+		padding: 1px 0;
+		transition : all 0.25s ease-out;
+		border-bottom: 0px solid transparent;
+		&:hover,
+		&:focus {
+			opacity: 1;
+			border-bottom-width: 2px;
+			color: $color__menu-hover;
+			border-color: $color__menu-hover-underline;
+		}
+	}
+	li.menu-item.menu-item-has-children a {
+		border: none;
+	}
+	ul.sub-menu {
+		position: absolute;
+		top: auto;
+		left: -9999px;
+		height: 1px;
+		width: 1px;
+		opacity: 0;
+		z-index: 9999;
+		overflow: hidden;
+		margin-left: -0.4em;
+		background: $color__background-sub-menu;
+		transform: translate(0,-15%) scale(0.75);
+		transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+	}
+	ul.sub-menu li.menu-item {
+		display: block;
+		padding: 0.2em 0.8em;
+		&:first-child {
+			padding-top: 0.4em;
+		}
+		&:last-of-type {
+			padding-bottom: 0.4em;
+		}
+	}
+	ul.sub-menu li.menu-item a, {
+		white-space: nowrap;
+		&:hover,
+		&:focus {
+			border-bottom: 2px solid $color__menu-hover-underline;
+		}
+	}
+	li.menu-item:hover > ul.sub-menu,
+	li.focus > ul.sub-menu {
+		left: 0;
+		height: auto;
+		width: auto;
+		opacity: 1;
+		overflow: visible;
+		transform: translate(0,0) scale(1);
+	}
+	ul.sub-menu li.menu-item:hover > ul.sub-menu,
+	ul.sub-menu li.focus > ul.sub-menu {
+		top: 0;
+		margin-left: 100%;
+	}
+	ul.sub-menu li.menu-item:not(:first-child):hover > ul.sub-menu {
+		margin-top: -0.2em;
+	}
+}
+
+/* Secondary desktop menu. */
+#secondary-navigation {
+	ul.sub-menu {
+		margin-left: 0;
+		margin-right: -0.8em;
+	}
+	li.menu-item:hover > ul.sub-menu,
+	li.focus > ul.sub-menu {
+		left: auto;
+		right: 0;
+	}
+	ul.sub-menu li.menu-item:hover > ul.sub-menu,
+	ul.sub-menu li.focus > ul.sub-menu {
+		margin-left: 0;
+		margin-right: 100%;
+	}
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+	/* Reveal stuff on larger screens. */
+	#primary-navigation,
+	#secondary-navigation,
+	.right-container,
+	#desktop-search {
+		display: block;
+		display: flex;
+	}
+
+	/* Hide stuff on larger screens. */
+	.menu-toggle,
+	#mobile-navigation {
+		display: none;
+	}
+}

@@ -1,0 +1,30 @@
+#main,
+#secondary .widget {
+	padding: 2em 6%;
+}
+#primary {
+	background: $color__background-primary;
+}
+#secondary {
+	background: $color__background-secondary;
+}
+#main {
+	background: $color__background-main;
+}
+#secondary .widget {
+	background: $color__background-sidebar-widgets;
+}
+
+/* Full width page template & portfolio template. */
+#primary.full-width-page,
+#primary.portfolio-page {
+	margin: 0;
+	width: 100%;
+	max-width: 1140px;
+}
+
+@media screen and (min-width: $breakpoint-large) {
+	#secondary .widget {
+		padding: 2em 8%;
+	}
+}

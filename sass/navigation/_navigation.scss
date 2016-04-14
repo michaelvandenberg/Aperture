@@ -1,0 +1,58 @@
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+	font-size: 14px;
+	font-size: 0.875em;
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	& .nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	& .nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+	.nav-previous a:before {
+		position: relative;
+		top: 1px;
+		content: '\f430';
+		font-family: Genericons;
+	}
+	.nav-next a:after {
+		position: relative;
+		top: 1px;
+		content: '\f429';
+		font-family: Genericons;
+	}
+}
+
+.infinite-scroll .pagination {
+	display: none;
+}
+
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+@import "links";
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+@import "menus";
+
+/*--------------------------------------------------------------
+## Social
+--------------------------------------------------------------*/
+@import "social";
+
+/*--------------------------------------------------------------
+## Search
+--------------------------------------------------------------*/
+@import "search";

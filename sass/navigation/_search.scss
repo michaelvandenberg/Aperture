@@ -1,0 +1,116 @@
+/* Default search. */
+.search-form { 
+	position: relative;
+	label {
+		display: block;
+		width: 100%;
+		padding: 15px 60px 15px 15px;
+		border: 1px solid #ddd;
+		background: white;
+	}
+	.search-field {
+		display: block;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		border: 0;
+		border-radius: 0;
+		font-size: 1rem;
+		color: #111;
+		background: transparent;
+	}
+	.search-field:focus {
+		outline: none;
+	}
+	.search-submit {
+		display: block;
+		height: 100%;
+		width: 56px;
+		background: none;
+		border: 0;
+		border-left: 1px solid #ddd;
+		color: #111;
+		text-align: center;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	.search-submit .genericon { 
+		font-size: 24px; 
+		position: relative;
+		top: -1px;
+	}
+	.search-submit:hover { 
+		cursor: pointer; 
+		color: $color__link-hover;
+	}
+}
+
+/* Desktop search. */
+#desktop-search {
+	.search-form {
+		width: 100%;
+		padding: 32px 16px;
+		padding: 2rem 1em;
+		label {
+			border: 0;
+			padding: 0 100px 0 0;
+			background: transparent;
+		}
+		.search-field {
+			font-size: 32px;
+			font-size: 2rem;
+			color: $color__form-placeholder;
+		}
+		.search-submit {
+			color: $color__form-placeholder;
+			min-height: 56px;
+			margin-left: 8rem;
+			margin-right: 1rem;
+			padding-left: 0.25rem;
+			padding-right: 0.25rem;
+			font-size: 32px;
+			font-size: 2rem;
+			vertical-align: bottom;
+			border-left: none;
+			transition: color 0.125s ease-in-out;
+			&:hover {
+				color: $color__link-hover;
+			}
+		}
+		.search-submit .genericon-search {
+			font-size: 32px;
+			font-size: 2rem;
+		}
+	}
+}
+
+/* Mobile search. */
+#mobile-search {
+	padding-top: 16px;
+	padding-top: 1rem;
+	.search-form {
+		border-top: 2px solid white;
+		label {
+			border: 0;
+			background: transparent;
+			padding-bottom: 0;
+			padding-bottom: 1em;
+		}
+		.search-field {
+			color: $color__text-input-focus;
+			font-size: 14px;
+			font-size: 0.875rem;
+		}
+		.search-submit {
+			color: $color__text-input-focus;
+			border: 0;
+			padding: 0;
+			width: 48px;
+		}
+		.search-submit .genericon {
+			font-size: 20px;
+			font-size: 1.25rem;
+		}
+	}
+}

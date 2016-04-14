@@ -1,0 +1,49 @@
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+.post-thumbnail a,
+.post-thumbnail img {
+	width: 100%;
+}
+.post-thumbnail img {
+	display: block;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/* Remove whitespace beneath image. */
+img {
+	vertical-align: text-bottom;
+}
+
+#content,
+#secondery,
+#tertiary {
+	a img {
+		transition: 0.5s;
+	}
+	a:hover img,
+	a:focus img {
+		filter: brightness(50%);
+	}
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+@import "captions";
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+@import "galleries";

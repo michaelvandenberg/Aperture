@@ -1,0 +1,179 @@
+#top-social {
+	display: flex;
+	align-items: center;
+
+	.sep {
+		position: relative;
+		bottom: -1px;
+		margin: 0 4px;
+		margin: 0 0.25em;
+		opacity: 0.25;
+		color: $color__menu-items;
+	}
+}
+
+#bottom-social {
+	padding-bottom: 1em;
+}
+
+.social-menu-container {
+	display: inline;
+
+	ul.menu {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+
+		li.menu-item {
+			display:  inline-block;
+
+			a::before {
+				content: '\f475';
+				speak: none;
+				display: inline-block;
+				height: 18px;
+				height: 1.125rem;
+				width: 18px;
+				width: 1.125rem;
+				color: $color__menu-items;
+				line-height: 18px;
+				line-height: 1.125rem;
+				font-family: 'Genericons';
+				font-weight: normal;
+				font-size: 16px;
+				font-size: 1.0rem;
+				margin-left: 4px;
+				margin-left: 0.25rem;
+				transition: transform 0.125s, color 0.125s ease-in-out;
+				vertical-align: middle;
+				-webkit-font-smoothing: antialiased;
+			}
+
+			a:hover::before {
+				color: $color__link-hover;
+				opacity: 1;
+				transform:rotate(360deg);
+			}
+
+			a[href*="wordpress.org"]::before,
+			a[href*="wordpress.com"]::before,
+			a[href*="michaelvandenberg.com"]::before {
+				content: '\f205';
+			}
+
+			a[href*="facebook.com"]::before {
+				content: '\f203';
+			}
+
+			a[href*="twitter.com"]::before {
+				content: '\f202';
+			}
+
+			a[href*="dribbble.com"]::before {
+				content: '\f201';
+			}
+
+			a[href*="plus.google.com"]::before {
+				content: '\f206';
+			}
+
+			a[href*="pinterest.com"]::before {
+				content: '\f210';
+			}
+
+			a[href*="github.com"]::before {
+				content: '\f200';
+			}
+
+			a[href*="tumblr.com"]::before {
+				content: '\f214';
+			}
+
+			a[href*="youtube.com"]::before {
+				content: '\f213';
+			}
+
+			a[href*="flickr.com"]::before {
+				content: '\f211';
+			}
+
+			a[href*="vimeo.com"]::before {
+				content: '\f212';
+			}
+
+			a[href*="instagram.com"]::before {
+				content: '\f215';
+			}
+
+			a[href*="codepen.io"]::before {
+				content: '\f216';
+			}
+
+			a[href*="linkedin.com"]::before {
+				content: '\f208';
+			}
+
+			a[href*="foursquare.com"]::before {
+				content: '\f226';
+			}
+
+			a[href*="reddit.com"]::before {
+				content: '\f222';
+			}
+
+			a[href*="digg.com"]::before {
+				content: '\f221';
+			}
+
+			a[href*="stumbleupon.com"]::before {
+				content: '\f223';
+			}
+
+			a[href*="dropbox.com"]::before {
+				content: '\f223';
+			}
+
+			a[href*="spotify.com"]::before {
+				content: '\f223';
+			}
+
+			a[href*="pocket.com"]::before {
+				content: '\f223';
+			}
+		}
+	}
+}
+
+/* Search toggle. */
+.search-toggle {
+	padding: 0;
+	height: 18px;
+	height: 1.125rem;
+	width: 18px;
+	width: 1.125rem;
+	line-height: 18px;
+	line-height: 1.125rem;
+	color: white;
+	border: none;
+	border-radius: 0;
+	background: transparent;
+
+	&:hover,
+	&:focus {
+		background: transparent;
+	}
+
+	.genericon-search {
+		position: relative;
+		bottom: -1px;
+		font-weight: bold;
+		vertical-align: middle;
+		transition: transform 0.125s, color 0.125s ease-in-out;
+	}
+
+	.genericon-search:hover {
+		opacity: 1;
+		transform:rotate(360deg);
+	}
+}

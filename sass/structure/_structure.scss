@@ -1,0 +1,45 @@
+/* Box shadow. */
+#masthead,
+#colophon,
+#main,
+#secondary .widget,
+#masthead .sub-menu,
+.slider-header h2 a,
+.slider-excerpt p,
+.slider-link a {
+	box-shadow: $box-shadow;
+}
+
+/* Common borders. */
+.page-header,
+.comment-list,
+.author-info,
+.comment-navigation,
+.post-navigation,
+.hentry:not(:last-child) {
+	margin: 0 0 2.5em;
+	padding: 0 0 2.5em;
+	border-bottom: 2px solid $color__border-article;
+}
+
+
+
+/*--------------------------------------------------------------
+## Layout
+--------------------------------------------------------------*/
+@import "layout";
+
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+@import "header";
+
+/*--------------------------------------------------------------
+## Content
+--------------------------------------------------------------*/
+@import "content";
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+@import "footer";

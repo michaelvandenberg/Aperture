@@ -1,0 +1,71 @@
+#masthead,
+#primary,
+#secondary,
+#colophon {
+	width: 100%;
+}
+#content {
+	display: flex;
+	flex-direction: column;
+	@include site-width();
+	margin-top: 56px;
+	margin-top: 3.5em;
+}
+#primary,
+#secondary {
+	max-width: 720px;
+	margin: 0 auto;
+}
+#secondary,
+#colophon {
+	margin-top: 56px;
+	margin-top: 3.5em;
+}
+
+/* Sidebar is not active. */
+.no-sidebar #primary {
+	margin: 0 auto;
+}
+
+@media screen and (min-width: $breakpoint-large) {
+	#content {
+		flex-direction: row;
+	}
+	#primary {
+		width: 66.666%;
+	}
+	#secondary {
+		width: 33.333%;
+		max-width: 360px;
+		margin-top: 0;
+	}
+	/* Sidebar is active and/or right sidebar is selected. */
+	.right-sidebar {
+		#primary {
+			margin: 0;
+			margin-right: 28px;
+			margin-right: 1.75em;
+		}
+		#secondary {
+			margin: 0;
+			margin-left: 28px;
+			margin-left: 1.75em;
+		}
+	}
+
+	/* Sidebar is active and/or left sidebar is selected. */
+	.left-sidebar {
+		#primary {
+			order: 2;
+			margin: 0;
+			margin-left: 28px;
+			margin-left: 1.75em;
+		}
+		#secondary {
+			order: 1;
+			margin: 0;
+			margin-right: 28px;
+			margin-right: 1.75em;
+		}
+	}
+}

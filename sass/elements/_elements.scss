@@ -1,0 +1,62 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+}
+
+body.custom-background.fullscreen-background {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+blockquote {
+	quotes: "" "";
+	margin: 0 0 1.5em 0;
+	padding: 0.75em 1.5em;
+	background: $color__background-blockquote;
+	border-left: 4px solid $color__border-quote;
+	border-radius: 0 4px 4px 0;
+
+	&:before,
+	&:after {
+		content: "";
+	}
+
+	p:last-child {
+		//margin-bottom: 0;
+	}
+
+	cite {
+		float: right;
+		font-size: 14px;
+		font-size: 0.875rem;
+		font-style: italic;
+		font-weight: bold;
+	}
+}
+
+hr {
+	background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+@import "lists";
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+@import "tables";

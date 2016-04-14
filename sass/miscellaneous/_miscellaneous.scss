@@ -1,0 +1,87 @@
+/* Font rendering fix. */
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+}
+
+/* Add some margin to Jetpack video. */
+.jetpack-video-wrapper {
+	margin-bottom: 1.5em;
+}
+
+/* Center Infinite Scroll loader. */
+.infinite-loader {
+	margin: 1.5em auto;
+	.spinner {
+		left: 50%!important;
+	}
+}
+
+/* Add some styling to the infinite footer. */
+#infinite-footer {
+	.container {
+		color: $color__text-main;
+		background: $color__background-infinite-footer;
+	}
+	.blog-info a,
+	.blog-credits a {
+		transition: all 0.25s ease-in-out;
+		color: $color__text-main;
+		&:hover {
+			color: $color__link-hover;
+		}
+	}
+}
+
+/* Selection style. */
+::selection {
+	color: black;
+	background: white;
+}
+
+/* Prevent the admin bar from overlapping the menu bar on the slider page. */
+body.admin-bar #page {
+	position: relative;
+}
+
+/* Adjust hide of the slider if admin bar is present. */
+.admin-bar.fullscreen-slider #content {
+	height: calc( 100vh - 32px );
+}
+
+
+/*--------------------------------------------------------------
+## Back to top.
+--------------------------------------------------------------*/
+
+/* Back to top. */
+.back-to-top {
+	position: fixed;
+	right: 2.0%;
+	bottom: -7.5%;
+	padding: 5px;
+	color: white;
+	opacity: 0.5;
+	visibility: hidden;
+	text-decoration: none;
+	transition: all 0.25s ease-in-out;
+	background: $color__background-back-to-top;
+	span {
+		color: white;
+		font-size: 24px;
+	}
+	&:hover,
+	&:focus {
+		opacity: 1;
+		text-decoration: none;
+	}
+	&:focus {
+		outline: white;
+	}
+}
+.show-back-to-top {
+	display: block;
+	bottom: 1.0%;
+	visibility: visible;
+}
