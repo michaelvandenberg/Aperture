@@ -1,7 +1,7 @@
 APERTURE
 Theme Version: 1.1.8
 Author: Michael Van Den Berg 
-Author URL: http://michaelvandenberg.com/
+Author URL: https://michaelvandenberg.com/
 
 --------------------
 === Description ===
