@@ -104,6 +104,8 @@ After installing and activating the Jetpack plugin follow these steps:
 * - Updated the tags in style.scss and style.css.
 * - Added missing text domain in search-form.php.
 * - Escaped some stuff that needed to be escaped.
+* - Optimized screenshot.png (reduced file size by 75%).
+* - Removed the sass files from the (WordPress.org) distribution copy.
 * 
 
 *
