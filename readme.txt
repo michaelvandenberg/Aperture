@@ -1,5 +1,5 @@
 APERTURE
-Theme Version: 1.1.7
+Theme Version: 1.1.8
 Author: Michael Van Den Berg 
 Author URL: http://michaelvandenberg.com/
 
