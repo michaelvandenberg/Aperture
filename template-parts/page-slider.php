@@ -24,7 +24,7 @@ get_header(); ?>
 						<?php 	$post_thumbnail_id = get_post_thumbnail_id();
 								$post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id ); ?>
 
-							<li class="featured" style="background: url(<?php echo $post_thumbnail_url; ?>);">
+							<li class="featured" style="background: url(<?php echo esc_url( $post_thumbnail_url ); ?>);">
 								<div class="featured-hentry-wrap <?php echo esc_attr( $animation ); ?>-animation">
 									<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 										<?php the_title( '<div class="slider-header"><h2 class="slider-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2></div>' ); ?>
@@ -55,7 +55,7 @@ get_header(); ?>
 						<?php 	$post_thumbnail_id = get_post_thumbnail_id();
 								$post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id ); ?>
 
-							<li class="featured" style="background: url(<?php echo $post_thumbnail_url; ?>);">
+							<li class="featured" style="background: url(<?php echo esc_url( $post_thumbnail_url ); ?>);">
 								<div class="featured-hentry-wrap">
 									<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 										<?php the_title( '<div class="slider-header"><h2 class="slider-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2></div>' ); ?>

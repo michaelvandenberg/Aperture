@@ -98,6 +98,15 @@ After installing and activating the Jetpack plugin follow these steps:
 --------------------
 
 *
+* 1.1.8 / 24.11.2016
+* - Changed theme URI to: https://michaelvandenberg.com/themes/#aperture
+* - Removed title shim for sites older than WordPress 4.1.
+* - Updated the tags in style.scss and style.css.
+* - Added missing text domain in search-form.php.
+* - Escaped some stuff that needed to be escaped.
+* 
+
+*
 * 1.1.7 / 27.11.2015
 * - Prior to PHP 5.5 emtpy() only supported variables. Fixed a issue with this in inc/customizer.php.
 * - Added credits to Underscores, Normalize.css and FlexSlider.
